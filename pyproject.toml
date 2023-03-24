@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sc2xmlreader"
+version = "0.0.5"
+authors = [
+  { name="lurchi70", email="hjleu@web.de" },
+]
+description = "Reads and interprets XML data from solvis remote device"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "defusedxml",
+  "requests",
+  "urllib3",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Lurchi70/sc2xmlreader_pypi_package"
+"Bug Tracker" = "https://github.com/Lurchi70/sc2xmlreader_pypi_package/issues"
