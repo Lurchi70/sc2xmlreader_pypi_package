@@ -87,7 +87,7 @@ The following sensors are available in the data:
 The following binary states are available in the data:
 
 |     | name                         | Description   |
-|------------------------------|:-------------------------------------------|
+|-----|------------------------------|:-------------------------------------------|
 | A12 | burner                       | oil/gas buner started. |
 | A13 | burner_s2                    | oil/gas s2 buner started |
 | A5  | circulation_pump             | warm water circulation pump running |
