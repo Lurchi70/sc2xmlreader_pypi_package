@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "sc2xmlreader"
-version = "0.0.5"
+version = "0.0.7"
 authors = [
   { name="lurchi70", email="hjleu@web.de" },
 ]

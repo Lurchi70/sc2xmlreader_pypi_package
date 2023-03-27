@@ -66,18 +66,21 @@ The following sensors are available in the data:
 | SL  | solar_power                  | W      | Current solarpower from the solar panels. |
 | S7  | solar_pressure               | bar    | Current pressure in the solar pipes. |
 | SE  | solar_yield                  | kWh    | Total yield of the solar panels to the heating system |
+| S1  | temperature_buffer_top       | °C     | current temperature in the buffer top |
 | S3  | temperature_buffer_reference | °C     | current refernce temperature in the buffer |
-| S4  | temperature_H_buffer_top     | °C     | current temperature in the H buffer top |
-| S9  | temperature_H_buffer_bottom  | °C     | current temperature in the H buffer bottom |
+| S4  | temperature_H_buffer_top     | °C     | current temperature in the heating buffer top |
+| S9  | temperature_H_buffer_bottom  | °C     | current temperature in the heating buffer bottom |
+| S2  | temperature_warm_water_station | °C     | current temperature warm water station |
 | S11 | temperature_circulation      | °C     | current temperature warm water circulation |
 | S12 | temperature_heating_circuit_1_flow | °C     | current flow temperature heating circuit 1 |
 | S13 | temperature_heating_circuit_2_flow | °C     | current flow temperature heating circuit 2 |
 | S10 | temperature_outside          | °C     | current temperature out the building |
 | S5  | temperature_solar_flow       | °C     | current flow temperature of solar heating  |
 | S8  | temperature_solar_panel      | °C     | current temperature on the solar panel(s)  |
-| S16 | temperature_solar_panel2     | °C     | current temperature on the solar2 panel(s)  |
+| S16 | temperature_solar_panel2     | °C     | current temperature on the solar2 panel(s) (if east/ west option) |
+| S16 | temperature_oven             | °C     | current temperature on the solar2 panel(s) (if oven option) |
 | S6  | temperature_solar_return     | °C     | current return temperature of solar heating  |
-| S17 | volume_solar_pump            | l/min  | current volume of fluid stream in solar heating  |
+| S17 | volume_solar_pump            | l/h    | current volume of fluid stream in solar heating  |
 | S18 | volume_warm_water            | l/min  | current volume of fluid stream in warm water station  |
 
 ## Binary states
@@ -97,7 +100,7 @@ The following binary states are available in the data:
 | A6  | heating_circuit_3_pump       | heating circuit 3 pump is running |
 | A14 | recovery                     | recovery is active |
 | A1  | solar_pump                   | solar pump is active |
-| A7  | solar_2_pump                 | second solar pump is active |
+| A7  | solar_pump_2                 | second solar pump is active |
 | A2  | warm_water_station_pump      | warm water station pump is started |
   
 ## Trademarks
