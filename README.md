@@ -13,8 +13,8 @@ When quering this interface remote will return something like:
   </data>
 </xml>
 ```
-the returned payload data has a length of 439 Bytes (in older versions 11 Bytes more) in an coded format. 
-At this point, many thanks to all the other persons that have decoded this format in the past and shared their insighst.
+the returned payload data has a length of 439 Bytes in an coded format. 
+At this point, many thanks to all the other persons that have decoded this format in the past and shared their insights.
 
 ## Interface
 To verify your hostname and user credentials and get the correct url:
@@ -42,7 +42,7 @@ To query data from solvis remote:
     
     try:
         my_sc2_reader = SC2XMLReader(correct_url, "username", "password")
-        buffer_top_temperture = my_sc2_reader.data["S0"]
+        the_solar_power = my_sc2_reader.data["solar_power"]
     except ConnectionError as err:
         # my be the hostname / ip is not correct
 ```
