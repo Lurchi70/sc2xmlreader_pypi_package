@@ -5,7 +5,7 @@ solvis control 2 board. The XML Interface provides a read-only access. Controlli
 SC2XMLReader returns the data and states of the Solvis Heating device.
 The xml-file is public and can be retrieved via http://<your-device-ip>/sc2_val.xml
 
-When quering this interface remote will return something like: 
+When querying this interface remote will return something like: 
 ```
 <xml>
   <data>
@@ -44,7 +44,7 @@ To query data from solvis remote:
         my_sc2_reader = SC2XMLReader(correct_url, "username", "password")
         the_solar_power = my_sc2_reader.data["solar_power"]
     except ConnectionError as err:
-        # my be the hostname / ip is not correct
+        # may be the hostname / ip is not correct
 ```
 
 ## Exceptions generated
@@ -54,7 +54,7 @@ To query data from solvis remote:
 
 ## Hint
 Before being able to use the integration, you have to own a solvis remote device and have it attached, configured and available in your network. 
-To retrieve the xml interface, a username and password must provided.   
+To retrieve the xml interface, a username and password must be provided.   
 
 ## Sensor data provided
 The following sensors are available in the data:
@@ -63,11 +63,11 @@ The following sensors are available in the data:
 |-----|------------------------------|--------|:-------------------------------------------|
 | time| last_update                  |        | Timestamp of latest data update.                |
 | Z4  | runtime_solar_pump           | h      | Total output runtime of the solar pump. |
-| SL  | solar_power                  | W      | Current solarpower from the solar panels. |
+| SL  | solar_power                  | W      | Current solar power from the solar panels. |
 | S7  | solar_pressure               | bar    | Current pressure in the solar pipes. |
 | SE  | solar_yield                  | kWh    | Total yield of the solar panels to the heating system |
 | S1  | temperature_buffer_top       | °C     | current temperature in the buffer top |
-| S3  | temperature_buffer_reference | °C     | current refernce temperature in the buffer |
+| S3  | temperature_buffer_reference | °C     | current reference temperature in the buffer |
 | S4  | temperature_H_buffer_top     | °C     | current temperature in the heating buffer top |
 | S9  | temperature_H_buffer_bottom  | °C     | current temperature in the heating buffer bottom |
 | S2  | temperature_warm_water_station | °C     | current temperature warm water station |
@@ -88,14 +88,14 @@ The following binary states are available in the data:
 
 |     | name                         | Description   |
 |-----|------------------------------|:-------------------------------------------|
-| A12 | burner                       | oil/gas buner started. |
-| A13 | burner_s2                    | oil/gas s2 buner started |
+| A12 | burner                       | oil/gas burner started. |
+| A13 | burner_s2                    | oil/gas s2 burner started |
 | A5  | circulation_pump             | warm water circulation pump running |
-| A8  | heating_circuit_1_mixer_open | indicates that the heating circuit 1 increases the flow temperture |
-| A9  | heating_circuit_1_mixer_close| indicates that the heating circuit 1 decreases the flow temperture |
+| A8  | heating_circuit_1_mixer_open | indicates that the heating circuit 1 increases the flow temperature |
+| A9  | heating_circuit_1_mixer_close| indicates that the heating circuit 1 decreases the flow temperature |
 | A3  | heating_circuit_1_pump       | heating circuit 1 pump is running |
-| A10 | heating_circuit_2_mixer_open | indicates that the heating circuit 2 increases the flow temperture |
-| A11 | heating_circuit_2_mixer_close| indicates that the heating circuit 2 decreases the flow temperture |
+| A10 | heating_circuit_2_mixer_open | indicates that the heating circuit 2 increases the flow temperature |
+| A11 | heating_circuit_2_mixer_close| indicates that the heating circuit 2 decreases the flow temperature |
 | A4  | heating_circuit_2_pump       | heating circuit 2 pump is running |
 | A6  | heating_circuit_3_pump       | heating circuit 3 pump is running |
 | A14 | recovery                     | recovery is active |
@@ -104,4 +104,4 @@ The following binary states are available in the data:
 | A2  | warm_water_station_pump      | warm water station pump is started |
   
 ## Trademarks
-Solvis is a registred trandemark of Solvis GmbH, Braunschweig (www.solvis.de)
+Solvis is a registered trademark of Solvis GmbH, Braunschweig (www.solvis.de)
