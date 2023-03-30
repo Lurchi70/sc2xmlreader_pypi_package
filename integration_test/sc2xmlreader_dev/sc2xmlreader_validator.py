@@ -61,7 +61,7 @@ class SC2XMLReaderValidator:
         if len(self.url) == 0:
             self.url = self.__makeURL()
 
-        uri = """{self.url}/sc2_val.xml"""
+        uri = f"""{self.url}/sc2_val.xml"""
         try:
             basic = HTTPDigestAuth(username, password)
             response = requests.get(uri, stream=True, auth=basic, timeout=10)

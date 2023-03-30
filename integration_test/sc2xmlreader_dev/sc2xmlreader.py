@@ -149,8 +149,10 @@ class SC2XMLReader:
             elif element_in_sc2_data == 16:
                 value_int = self.convert_data_to_int(data_sc2, 4)
                 data_sc2 = data_sc2[4:]
+
+                value_float = value_int / 10
                 data_array[self.MAP_SOLVIS_TO_NAME["S18"]] = self.create_data_entry(
-                    "S18", "Volume Stream Water", value_int, "l/min"
+                    "S18", "Volume Stream Water", value_float, "l/min"
                 )
             elif element_in_sc2_data == 17:
                 value_int = self.convert_data_to_int(data_sc2, 4)
