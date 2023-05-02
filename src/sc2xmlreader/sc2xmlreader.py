@@ -226,7 +226,7 @@ class SC2XMLReader:
         )
 
         value_float = 0.0
-        value_float = data_array["Z1"]["Value"] * self.burner_capacity
+        value_float = data_array[self.MAP_SOLVIS_TO_NAME["Z1"]]["Value"] * self.burner_capacity
         data_array[self.MAP_SOLVIS_TO_NAME["OC"]] = self.create_data_entry(
             "OC", "Power Consumption Oil Burner", round(value_float, 2), "kWh"
         )
