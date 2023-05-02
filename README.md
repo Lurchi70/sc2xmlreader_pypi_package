@@ -62,8 +62,12 @@ The following sensors are available in the data:
 | key | name                         | Unit   | Description   |
 |-----|------------------------------|--------|:-------------------------------------------|
 | time| last_update                  |        | Timestamp of latest data update.                |
+| Z1  | runtime_burner               | h      | Total runtime of the oil burner. |
+| Z2  | total_burner_start           |        | Total number of oil burner starts. |
+| Z3  | total_burner_2nd_start       |        | Total number of 2nd oil burner starts. |
 | Z4  | runtime_solar_pump           | h      | Total output runtime of the solar pump. |
 | SL  | solar_power                  | W      | Current solar power from the solar panels. |
+| SD  | temperature_solar_diff_flow_return | °K | Temperature difference between solar flow and solar return. |
 | S7  | solar_pressure               | bar    | Current pressure in the solar pipes. |
 | SE  | solar_yield                  | kWh    | Total yield of the solar panels to the heating system |
 | S1  | temperature_buffer_top       | °C     | current temperature in the buffer top |
@@ -82,6 +86,8 @@ The following sensors are available in the data:
 | S6  | temperature_solar_return     | °C     | current return temperature of solar heating  |
 | S17 | volume_solar_pump            | l/h    | current volume of fluid stream in solar heating  |
 | S18 | volume_warm_water            | l/min  | current volume of fluid stream in warm water station  |
+| BC  | burner_capacity              | kW     | capacity of oil burner |
+| OC  | burner_power_consumption     | kWh    | Power consumption of oil burner (calculated)  |
 
 ## Binary states
 The following binary states are available in the data:

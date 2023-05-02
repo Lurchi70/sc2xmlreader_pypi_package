@@ -19,6 +19,8 @@ class LocalDemo:
         pprint.pprint("""   Number of Burnerstart: {0} {1}""".format(self.remote.data["total_burner_start"]["Value"], self.remote.data["total_burner_start"]["Unit"]))
         pprint.pprint("""   Number of 2nd Burnerstart: {0} {1}""".format(self.remote.data["total_burner_2nd_start"]["Value"], self.remote.data["total_burner_2nd_start"]["Unit"]))
         pprint.pprint("""   Runtime Burner: {0} {1}""".format(self.remote.data["runtime_burner"]["Value"], self.remote.data["runtime_burner"]["Unit"]))
+        pprint.pprint("""   Burner Capacity: {0} {1}""".format(self.remote.data["burner_capacity"]["Value"], self.remote.data["burner_capacity"]["Unit"]))
+        pprint.pprint("""   Burner Consumption: {0} {1}""".format(self.remote.data["burner_consumption"]["Value"], self.remote.data["burner_consumption"]["Unit"]))
         pprint.pprint("""   Runtime Solarpump: {0} {1}""".format(self.remote.data["runtime_solar_pump"]["Value"], self.remote.data["runtime_solar_pump"]["Unit"]))
 
     def ShowSolarInfo(self):

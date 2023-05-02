@@ -28,11 +28,12 @@ class SC2XMLReader:
     manufacturer: str | None
     model: str | None
     name: str | None
+    burner_capacity : float
     sw_version: str | None
     hw_version: str | None
     via_device: tuple[str, str]
 
-    def __init__(self, url: str, username: str, password: str, withWarmWaterStation=True, withSolar=True, withEastWest=False, withOven=False) -> None:
+    def __init__(self, url: str, username: str, password: str, withWarmWaterStation=True, withSolar=True, withEastWest=False, withOven=False, burnerCapacity=27.0) -> None:
         """Initialize the data interpreter."""
         self.data = {}
         self.MAP_SOLVIS_TO_NAME = MAP_SOLVIS_TO_NAME_BASIC
@@ -45,6 +46,7 @@ class SC2XMLReader:
         self.warm_water_station = withWarmWaterStation
         self.manufacturer = HEATING_MANUFACTURER
         self.model = HEATING_DEVICE_TYPE.SolvisMax.name
+        self.burner_capacity = burnerCapacity
         self.name = None
         self.sw_version = None
         self.hw_version = None
@@ -217,6 +219,16 @@ class SC2XMLReader:
         data_sc2 = data_sc2[4:]
         data_array[self.MAP_SOLVIS_TO_NAME["SL"]] = self.create_data_entry(
             "SL", "Solarpower", value_float, "kW"
+        )
+
+        data_array[self.MAP_SOLVIS_TO_NAME["BC"]] = self.create_data_entry(
+            "BC", "Capacity Oil Burner", round(self.burner_capacity, 2), "kW"
+        )
+
+        value_float = 0.0
+        value_float = data_array["Z1"]["Value"] * self.burner_capacity
+        data_array[self.MAP_SOLVIS_TO_NAME["OC"]] = self.create_data_entry(
+            "OC", "Power Consumption Oil Burner", round(value_float, 2), "kWh"
         )
 
         value_float = 0.0

@@ -79,6 +79,8 @@ MAP_SOLVIS_TO_NAME_BASIC["A2"] = "NA"
 MAP_SOLVIS_TO_NAME_BASIC["RF1"] = "temperature_room_1"
 MAP_SOLVIS_TO_NAME_BASIC["RF2"] = "temperature_room_2"
 MAP_SOLVIS_TO_NAME_BASIC["RF3"] = "temperature_room_3"
+MAP_SOLVIS_TO_NAME_BASIC["BC"] = "burner_capacity"
+MAP_SOLVIS_TO_NAME_BASIC["OC"] = "burner_consumption"
 
 MAP_SOLVIS_TO_NAME_WITH_WARM_WATER_STATION = dict()
 MAP_SOLVIS_TO_NAME_WITH_WARM_WATER_STATION["S2"] = "temperature_warm_water_station"
